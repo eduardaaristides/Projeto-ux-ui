@@ -85,20 +85,7 @@ header h1 {
     flex: 1;
 
 }
-.caixa{
-    background-color: #1C446B;
-    width: 200px;
-    height: 230px;
-    text-align: center;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: white;
-}
 
-.caixa img{
-    margin: 20px;
-    text-align: center;
-}
 .texto{
 color: white;
 font-weight: 100;

@@ -38,13 +38,12 @@
                 <img width="20" height="20" src="https://img.icons8.com/ios/50/lock-2.png" alt="lock-2"/>
                 <a href="#">Esqueci minha senha</a>
             </div>
-            <button type="button" class="submit-button" onclick="window.location.href='tela_perfil.html'">Entrar</button>
-          
+            <a href="tela_principal.html"><button type="button" class="submit-button" onclick="window.location.href='tela_perfil.html'">Entrar</button></a>
             <div class="register-link">
                 <p>Não está Cadastrado? <a href="tela_cadastro.html">Cadastrar</a></p>
             </div>
 
-            <!-- Botão de Login com Google -->
+            
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </form>
     </div>
@@ -58,7 +57,7 @@
                 var item = document.createElement("li");
                 item.textContent = doenca;
                 lista.appendChild(item);
-                doencaInput.value = ""; // Limpa o campo de entrada
+                doencaInput.value = ""; 
             }
         }
 
