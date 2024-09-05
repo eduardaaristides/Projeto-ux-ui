@@ -1,0 +1,283 @@
+/* Regras existentes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o footer fique no fundo da página */
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: #1C446B;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixar o cabeçalho no topo da página */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima do restante do conteúdo */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container h2 {
+    color: white;
+    font-weight: 100;
+    font-size: large;
+}
+
+.title-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-container h1 {
+    color: white;
+    font-size: x-large;
+}
+
+nav a {
+    margin: 10px;
+    font-size: large;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    max-width: 50px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+}
+
+/* Main Container */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Garantir que o conteúdo esteja em coluna se não houver espaço suficiente */
+    align-items: center;
+    margin-top: 100px; /* Ajusta o espaço acima para garantir que o conteúdo não sobreponha o cabeçalho */
+}
+
+/* Glucose Control and Heart Rate Control Side by Side */
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os containers se empilhem em telas menores */
+    margin: 20px;
+    width: 90%;
+}
+
+.glucose-control,
+.heart-rate-control {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 45%; /* Ajusta a largura máxima para caber lado a lado */
+    flex: 1; /* Permite que os containers se ajustem ao espaço disponível */
+    box-sizing: border-box; /* Garante que padding e bordas não aumentem a largura total */
+    border: 2px solid #163a56;
+}
+
+.glucose-control h2,
+.heart-rate-control h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #1C446B;
+    text-align: center;
+}
+
+.glucose-input,
+.heart-rate-input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.glucose-input input,
+.heart-rate-input input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+.glucose-input button,
+.heart-rate-input button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1C446B;
+    color: white;
+    cursor: pointer;
+}
+
+.glucose-input button:hover,
+.heart-rate-input button:hover {
+    background-color: #163a56;
+}
+
+.glucose-history,
+.heart-rate-history {
+    text-align: center;
+}
+
+#glucose-chart,
+#heart-rate-chart {
+    width: 100%;
+    height: 400px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1C446B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Garante que o footer fique colado no fundo */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Medical Appointments and Medical Support */
+.medical-appointments,
+.medical-support {
+    margin: 20px auto; /* Ajustado para evitar sobreposição com o cabeçalho */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+}
+
+.appointment-form,
+.doctor-contacts {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.appointment-form input,
+.doctor-contacts input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.appointment-form button,
+.doctor-contacts button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1C446B;
+    color: white;
+    cursor: pointer;
+}
+
+.appointment-form button:hover,
+.doctor-contacts button:hover {
+    background-color: #163a56;
+}
+
+.appointments-list {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #1C446B;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button.remove-appointment,
+button.remove-task {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.remove-appointment:hover,
+button.remove-task:hover {
+    background-color: #c82333;
+}
