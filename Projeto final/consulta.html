@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +10,27 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="perfil.html"><img width="50" height="50" src="img/perfil.png" alt="Perfil" class="logo"/></a>
+            <a href="perfil.html" aria-label="Perfil de Marta Gomes">
+                <img width="50" height="50" src="img/perfil.png" alt="Perfil" class="logo"/>
+            </a>
             <h2>Marta Gomes</h2>
             <div class="title-container">
                 <h1 class="principal"></h1>
             </div>
             <nav>
-                <a href="#">Contatos</a>
-                <a href="#"><img src="img/Logo Saúde Pró.png" alt="Imagem" width="40" height="40"></a>
+                <a href="#" aria-label="Contatos">Contatos</a>
+                <a href="#" aria-label="Logo Saúde Pró">
+                    <img src="img/Logo Saúde Pró.png" alt="Imagem" width="40" height="40">
+                </a>
                 <a href="#"></a>
             </nav>
         </div>
     </header>
     
-    <div class="container">
+    <main class="container">
         <!-- Horário de Remédios -->
-        <div class="task-schedule">
-            <h2>Horário de Remédios</h2>
+        <section class="task-schedule" aria-labelledby="task-schedule-title">
+            <h2 id="task-schedule-title">Horário de Remédios</h2>
             <table>
                 <thead>
                     <tr>
@@ -40,20 +44,24 @@
                 </tbody>
             </table>
             <div class="add-task-form">
-                <input type="text" id="task-input" placeholder="Novo Remédio">
-                <input type="time" id="time-input">
-                <button id="add-task">Adicionar Remédios</button>
+                <label for="task-input" class="visually-hidden">Novo Remédio</label>
+                <input type="text" id="task-input" placeholder="Novo Remédio" aria-label="Novo Remédio">
+                <label for="time-input" class="visually-hidden">Horário</label>
+                <input type="time" id="time-input" aria-label="Horário">
+                <button id="add-task" aria-label="Adicionar Remédios">Adicionar Remédios</button>
             </div>
             <div id="reminder-container"></div>
-        </div>
+        </section>
 
         <!-- Consultas Médicas -->
-        <div class="medical-appointments">
-            <h2>Consultas Médicas</h2>
+        <section class="medical-appointments" aria-labelledby="medical-appointments-title">
+            <h2 id="medical-appointments-title">Consultas Médicas</h2>
             <div class="appointment-form">
-                <input type="date" id="appointment-date">
-                <input type="text" id="appointment-description" placeholder="Descrição da Consulta">
-                <button id="add-appointment">Agendar Consulta</button>
+                <label for="appointment-date" class="visually-hidden">Data da Consulta</label>
+                <input type="date" id="appointment-date" aria-label="Data da Consulta">
+                <label for="appointment-description" class="visually-hidden">Descrição da Consulta</label>
+                <input type="text" id="appointment-description" placeholder="Descrição da Consulta" aria-label="Descrição da Consulta">
+                <button id="add-appointment" aria-label="Agendar Consulta">Agendar Consulta</button>
             </div>
             <div class="appointments-list">
                 <table id="appointments-table">
@@ -69,48 +77,54 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="exercise-goals">
-            <h2>Metas de Exercício</h2>
+        </section>
+
+        <!-- Metas de Exercício -->
+        <section class="exercise-goals" aria-labelledby="exercise-goals-title">
+            <h2 id="exercise-goals-title">Metas de Exercício</h2>
             <div class="add-goal-form">
-                <input type="text" id="exercise-type" placeholder="Tipo de Exercício">
-                <input type="number" id="exercise-duration" placeholder="Duração (minutos)">
-                <input type="number" id="exercise-frequency" placeholder="Frequência semanal">
-                <button id="add-goal">Adicionar Meta</button>
+                <label for="exercise-type" class="visually-hidden">Tipo de Exercício</label>
+                <input type="text" id="exercise-type" placeholder="Tipo de Exercício" aria-label="Tipo de Exercício">
+                <label for="exercise-duration" class="visually-hidden">Duração (minutos)</label>
+                <input type="number" id="exercise-duration" placeholder="Duração (minutos)" aria-label="Duração (minutos)">
+                <label for="exercise-frequency" class="visually-hidden">Frequência semanal</label>
+                <input type="number" id="exercise-frequency" placeholder="Frequência semanal" aria-label="Frequência semanal">
+                <button id="add-goal" aria-label="Adicionar Meta">Adicionar Meta</button>
             </div>
             <div class="goal-list" id="goal-list">
                 <!-- Metas serão adicionadas aqui -->
             </div>
-        </div>
+        </section>
         
-    
-       <!-- Suporte para Dados Médicos -->
-<div class="medical-support">
-    <h2>Suporte para Dados Médicos</h2>
-    <div class="doctor-contacts">
-        <h3>Informações de Contato dos Médicos</h3>
-        <input type="text" id="doctor-name" placeholder="Nome do Médico">
-        <input type="text" id="doctor-contact" placeholder="Contato do Médico">
-        <button id="add-doctor">Adicionar Contato</button>
-        <ul id="doctor-list">
-            <!-- Contatos dos médicos serão adicionados aqui -->
-        </ul>
-    </div>
-    <div class="medication-history">
-        <h3>Histórico de Medicamentos</h3>
-        <textarea id="medication-history" rows="4" placeholder="Digite o histórico de medicamentos aqui"></textarea>
-        <button id="save-medication-history">Salvar Histórico</button>
-    </div>
-</div>
-
+        <!-- Suporte para Dados Médicos -->
+        <section class="medical-support" aria-labelledby="medical-support-title">
+            <h2 id="medical-support-title">Suporte para Dados Médicos</h2>
+            <div class="doctor-contacts">
+                <h3>Informações de Contato dos Médicos</h3>
+                <label for="doctor-name" class="visually-hidden">Nome do Médico</label>
+                <input type="text" id="doctor-name" placeholder="Nome do Médico" aria-label="Nome do Médico">
+                <label for="doctor-contact" class="visually-hidden">Contato do Médico</label>
+                <input type="text" id="doctor-contact" placeholder="Contato do Médico" aria-label="Contato do Médico">
+                <button id="add-doctor" aria-label="Adicionar Contato">Adicionar Contato</button>
+                <ul id="doctor-list">
+                    <!-- Contatos dos médicos serão adicionados aqui -->
+                </ul>
+            </div>
+            <div class="medication-history">
+                <h3>Histórico de Medicamentos</h3>
+                <label for="medication-history" class="visually-hidden">Histórico de Medicamentos</label>
+                <textarea id="medication-history" rows="4" placeholder="Digite o histórico de medicamentos aqui" aria-label="Histórico de Medicamentos"></textarea>
+                <button id="save-medication-history" aria-label="Salvar Histórico">Salvar Histórico</button>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <div class="footer-links">
-                    <a href="#medication-management">Gerenciamento de Medicamentos</a> |
-                    <a href="#health-monitoring">Monitoramento de Saúde</a> |
-                    <a href="#safety-assistance">Segurança e Assistência</a> |  
+                <a href="#medication-management" aria-label="Gerenciamento de Medicamentos">Gerenciamento de Medicamentos</a> |
+                <a href="#health-monitoring" aria-label="Monitoramento de Saúde">Monitoramento de Saúde</a> |
+                <a href="#safety-assistance" aria-label="Segurança e Assistência">Segurança e Assistência</a>
             </div>
         </div>
     </footer>

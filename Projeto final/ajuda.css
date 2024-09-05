@@ -1,3 +1,4 @@
+/* ajuda.css */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .body-text {
     text-align: center;
     margin-bottom: 20px;
@@ -35,24 +37,24 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.header-container h2{
+
+.header-container h2 {
     color: white;
     font-weight: 100;
     font-size: large;
 }
+
 .title-container {
     flex-grow: 1;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.title-container h1{
+
+.title-container h1 {
     color: white;
     font-size: x-large;
-}
-.time{
-    margin-left: 100px;
 }
 
 nav a {
@@ -61,13 +63,18 @@ nav a {
 }
 
 a {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: none;
     color: white;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #1C446B;
+    outline-offset: 2px;
 }
 
 .logo {
@@ -149,4 +156,3 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-

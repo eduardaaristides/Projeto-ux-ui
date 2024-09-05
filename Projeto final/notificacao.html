@@ -13,98 +13,101 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="tela_principal.html"><img src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo"></a>
+            <a href="tela_principal.html" aria-label="Voltar para a tela principal">
+                <img src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo">
+            </a>
             <div class="title-container">
                 <h1 class="principal">Notificações</h1>
             </div>
             <nav>
-                <a href="#">Sobre nós</a>
+                <a href="#" aria-label="Sobre nós">Sobre nós</a>
             </nav>
         </div>
     </header>
     
-    <div class="notification--page">
-        <div class="notification--page_actions">
-            <p class="notification--page_amount">Notificações <span>3</span></p>
-            <button class="notification--page_removed-btn">
-                Marcar todas como lidas
-            </button>
-        </div>
-    
-        <div class="notification--page_activity unread">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Lembrete: Está na hora de marcar a glicose.
-                </p>
-                <p class="notification--page_timeline">1m atrás</p>
+    <main>
+        <div class="notification--page">
+            <div class="notification--page_actions">
+                <p class="notification--page_amount">Notificações <span>3</span></p>
+                <button class="notification--page_removed-btn" aria-label="Marcar todas as notificações como lidas">
+                    Marcar todas como lidas
+                </button>
+            </div>
+        
+            <div class="notification--page_activity unread" role="alert">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Lembrete: Está na hora de marcar a glicose.
+                    </p>
+                    <p class="notification--page_timeline">1m atrás</p>
+                </div>
+            </div>
+        
+            <div class="notification--page_activity unread" role="alert">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Lembrete: Está na hora de monitorar os batimentos cardíacos.
+                    </p>
+                    <p class="notification--page_timeline">5m atrás</p>
+                </div>
+            </div>
+        
+            <div class="notification--page_activity unread" role="alert">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Lembrete: Existem atividades pendentes a serem concluídas.
+                    </p>
+                    <p class="notification--page_timeline">1 dia atrás</p>
+                </div>
+            </div>
+        
+            <div class="notification--page_activity read" role="status">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Glicose registrada com sucesso. Verifique os dados no monitoramento.
+                    </p>
+                    <p class="notification--page_timeline">5 dias atrás</p>
+                    <p class="notification--page__private-message">
+                        Os dados da glicose foram atualizados. Revise as informações na aba de monitoramento.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="notification--page_activity read" role="status">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Progresso de atividades registrado. Verifique as atualizações.
+                    </p>
+                    <p class="notification--page_timeline">1 semana atrás</p>
+                </div>
+                <img src="img/atividade.png" width="90" height="90" alt="Ícone de atividades">
+            </div>
+        
+            <div class="notification--page_activity read" role="status">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Novos batimentos cardíacos registrados.
+                    </p>
+                    <p class="notification--page_timeline">2 semanas atrás</p>
+                </div>
+            </div>
+        
+            <div class="notification--page_activity read" role="status">
+                <img src="img/perfil.png" width="90" height="90" alt="Foto de perfil">
+                <div>
+                    <p class="notification--page_info">
+                        Atividades diárias atualizadas.
+                    </p>
+                    <p class="notification--page_timeline">2 semanas atrás</p>
+                </div>
             </div>
         </div>
-    
-        <div class="notification--page_activity unread">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Lembrete: Está na hora de monitorar os batimentos cardíacos.
-                </p>
-                <p class="notification--page_timeline">5m atrás</p>
-            </div>
-        </div>
-    
-        <div class="notification--page_activity unread">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Lembrete: Existem atividades pendentes a serem concluídas.
-                </p>
-                <p class="notification--page_timeline">1 dia atrás</p>
-            </div>
-        </div>
-    
-        <div class="notification--page_activity read">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Glicose registrada com sucesso. Verifique os dados no monitoramento.
-                </p>
-                <p class="notification--page_timeline">5 dias atrás</p>
-                <p class="notification--page__private-message">
-                    Os dados da glicose foram atualizados. Revise as informações na aba de monitoramento.
-                </p>
-            </div>
-        </div>
-    
-        <div class="notification--page_activity read">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Progresso de atividades registrado. Verifique as atualizações.
-                </p>
-                <p class="notification--page_timeline">1 semana atrás</p>
-            </div>
-            <img src="img/atividade.png" width="90" height="90" alt="atividades">
-        </div>
-    
-        <div class="notification--page_activity read">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Novos batimentos cardíacos registrados.
-                </p>
-                <p class="notification--page_timeline">2 semanas atrás</p>
-            </div>
-        </div>
-    
-        <div class="notification--page_activity read">
-            <img src="img/perfil.png" width="90" height="90" alt="perfil">
-            <div>
-                <p class="notification--page_info">
-                    Atividades diárias atualizadas.
-                </p>
-                <p class="notification--page_timeline">2 semanas atrás</p>
-            </div>
-        </div>
-    </div>
-    
+    </main>
 </body>
 </html>
