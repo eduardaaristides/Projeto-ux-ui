@@ -1,37 +1,67 @@
-<!-- component -->
-<div class="h-screen bg-gray-500">
-	<nav class="flex justify-center p-4 bg-gray-600">
-		<h1 class="text-white text-2xl font-bold">Feedback Traversy Media</h1>
-	</nav>
-	<div>
-		<form class="flex justify-center mt-10">
-			<div class="bg-gray-50 p-8 rounded-lg">
-				<h1 class="text-center mb-4">Write Todo List</h1>
-				<div class="flex space-x-2 p-2 bg-white rounded-md">
-					<input type="text" placeholder="Write here..." class="w-full outline-none" />
-					<button class="bg-green-500 px-2 py-1 rounded-md text-white font-semibold">send</button>
-				</div>
-			</div>
-		</form>
-		<div>
-			<div class="flex justify-center">
-				<div class=" relative justify-center mt-6">
-					<div class="absolute flex top-0 right-0 p-3 space-x-1">
-						<span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-</svg>
-          </span>
-						<span>
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-</svg>
-          </span>
-					</div>
-					<span class="absolute -left-3 -top-3 bg-green-500 flex justify-center items-center rounded-full w-8 h-8 text-gray-50 font-bold">9</span>
-					<p class="bg-white px-12 py-8 rounded-lg w-80">simply dummy text of the printing and typesetting industry.  </p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="tela_principal.html"><img src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo"></a>
+            <div class="title-container">
+                <h1 class="principal">Lista de Tarefas</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="task-list-container">
+            <h2>Minhas Tarefas</h2>
+            <div class="input-task">
+                <input type="text" id="task-input" placeholder="Adicionar Tarefas" aria-label="Nova tarefa">
+                <select id="priority-select" aria-label="Prioridade">
+                    <option value="low">Baixa</option>
+                    <option value="medium">Média</option>
+                    <option value="high">Alta</option>
+                </select>
+                <button onclick="addTask()">+</button>
+            </div>
+            <p id="success-message" class="success-message"></p>
+            <ul id="task-list" class="task-list" aria-live="polite">
+                <li class="task-item high">
+                    <span>Ler um livro</span>
+                    <div>
+                        <button class="edit" onclick="editTask(this)">✏️</button>
+                        <button class="delete" onclick="removeTask(this)">🗑️</button>
+                    </div>
+                </li>
+                <li class="task-item medium">
+                    <span>Jardinagem</span>
+                    <div>
+                        <button class="edit" onclick="editTask(this)">✏️</button>
+                        <button class="delete" onclick="removeTask(this)">🗑️</button>
+                    </div>
+                </li>
+                <li class="task-item low">
+                    <span>Yoga</span>
+                    <div>
+                        <button class="edit" onclick="editTask(this)">✏️</button>
+                        <button class="delete" onclick="removeTask(this)">🗑️</button>
+                    </div>
+                </li>
+                <li class="task-item medium">
+                    <span>Caminhada</span>
+                    <div>
+                        <button class="edit" onclick="editTask(this)">✏️</button>
+                        <button class="delete" onclick="removeTask(this)">🗑️</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
