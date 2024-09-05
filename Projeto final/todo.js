@@ -1,11 +1,12 @@
 function addTask() {
     const taskInput = document.getElementById('task-input');
-    const taskList = document.getElementById('task-list');
     const prioritySelect = document.getElementById('priority-select');
+    const daySelect = document.getElementById('day-select');
     const successMessage = document.getElementById('success-message');
     
     if (taskInput.value.trim() !== '') {
-        const li = document.createElement('li');
+        const taskColumn = document.getElementById(daySelect.value);
+        const li = document.createElement('div');
         li.className = `task-item ${prioritySelect.value}`;
         li.innerHTML = `
             <span>${taskInput.value}</span>
@@ -14,16 +15,16 @@ function addTask() {
                 <button class="delete" onclick="removeTask(this)">🗑️</button>
             </div>
         `;
-        taskList.appendChild(li);
+        taskColumn.appendChild(li);
         taskInput.value = ''; // Limpa o campo de entrada
-        successMessage.textContent = "Todo item Created Successfully.";
+        successMessage.textContent = "Tarefa adicionada com sucesso!";
         setTimeout(() => successMessage.textContent = '', 2000);
     }
 }
 
 function editTask(button) {
     const taskItem = button.parentElement.parentElement;
-    const newTask = prompt("Edit your task:", taskItem.firstChild.textContent);
+    const newTask = prompt("Edite sua tarefa:", taskItem.firstChild.textContent);
     if (newTask) {
         taskItem.firstChild.textContent = newTask;
     }

@@ -20,47 +20,115 @@
 
     <main>
         <div class="task-list-container">
-            <h2>Minhas Tarefas</h2>
+            <h2>Tarefas da Semana</h2>
             <div class="input-task">
-                <input type="text" id="task-input" placeholder="Adicionar Tarefas" aria-label="Nova tarefa">
+                <input type="text" id="task-input" placeholder="Adicionar Tarefa" aria-label="Nova tarefa">
                 <select id="priority-select" aria-label="Prioridade">
                     <option value="low">Baixa</option>
                     <option value="medium">Média</option>
                     <option value="high">Alta</option>
                 </select>
+                <select id="day-select" aria-label="Dia da semana">
+                    <option value="monday">Segunda-feira</option>
+                    <option value="tuesday">Terça-feira</option>
+                    <option value="wednesday">Quarta-feira</option>
+                    <option value="thursday">Quinta-feira</option>
+                    <option value="friday">Sexta-feira</option>
+                    <option value="saturday">Sábado</option>
+                    <option value="sunday">Domingo</option>
+                </select>
                 <button onclick="addTask()">+</button>
             </div>
             <p id="success-message" class="success-message"></p>
-            <ul id="task-list" class="task-list" aria-live="polite">
-                <li class="task-item high">
-                    <span>Ler um livro</span>
-                    <div>
-                        <button class="edit" onclick="editTask(this)">✏️</button>
-                        <button class="delete" onclick="removeTask(this)">🗑️</button>
-                    </div>
-                </li>
-                <li class="task-item medium">
-                    <span>Jardinagem</span>
-                    <div>
-                        <button class="edit" onclick="editTask(this)">✏️</button>
-                        <button class="delete" onclick="removeTask(this)">🗑️</button>
-                    </div>
-                </li>
-                <li class="task-item low">
-                    <span>Yoga</span>
-                    <div>
-                        <button class="edit" onclick="editTask(this)">✏️</button>
-                        <button class="delete" onclick="removeTask(this)">🗑️</button>
-                    </div>
-                </li>
-                <li class="task-item medium">
-                    <span>Caminhada</span>
-                    <div>
-                        <button class="edit" onclick="editTask(this)">✏️</button>
-                        <button class="delete" onclick="removeTask(this)">🗑️</button>
-                    </div>
-                </li>
-            </ul>
+            
+            <!-- Tabela de Tarefas da Semana -->
+            <table class="task-table" aria-live="polite">
+                <thead>
+                    <tr>
+                        <th>Segunda-feira</th>
+                        <th>Terça-feira</th>
+                        <th>Quarta-feira</th>
+                        <th>Quinta-feira</th>
+                        <th>Sexta-feira</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="monday" class="task-column">
+                            <div class="task-item low">
+                                <span>Tomar medicamento para pressão</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                            <div class="task-item medium">
+                                <span>Fazer caminhada</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="tuesday" class="task-column">
+                            <div class="task-item high">
+                                <span>Consulta com o médico</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="wednesday" class="task-column">
+                            <div class="task-item low">
+                                <span>Tomar suplemento de vitaminas</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="thursday" class="task-column">
+                            <div class="task-item medium">
+                                <span>Reunião com o fisioterapeuta</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="friday" class="task-column">
+                            <div class="task-item high">
+                                <span>Tomar medicamento para diabetes</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="saturday" class="task-column">
+                            <div class="task-item low">
+                                <span>Fazer exercícios de alongamento</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="sunday" class="task-column">
+                            <div class="task-item medium">
+                                <span>Assistir aula de yoga online</span>
+                                <div>
+                                    <button class="edit" onclick="editTask(this)">✏️</button>
+                                    <button class="delete" onclick="removeTask(this)">🗑️</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 </body>

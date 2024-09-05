@@ -1,3 +1,4 @@
+/* tela_principal.css */
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +64,11 @@ a {
 a:hover {
     text-decoration: none;
     color: white;
+}
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid #1C446B;
+    outline-offset: 2px;
 }
 
 .logo {

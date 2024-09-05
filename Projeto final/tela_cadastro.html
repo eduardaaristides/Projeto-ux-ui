@@ -20,52 +20,54 @@
 <body>
     <header>
         <div class="header-container">
-            <img width="50" height="50" src="img/Logo Sa+¦de Pr+¦.png" alt="monzo--v1" class="logo"/>
+            <img width="50" height="50" src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo"/>
             <div class="title-container">
-                <h1 class="principal"> SaúdePro</h1>
+                <h1 class="principal">SaúdePro</h1>
             </div>
             <nav>
-                <a href="#">Sobre nós</a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#" aria-label="Sobre nós">Sobre nós</a>
             </nav>
         </div>
     </header>
     <div class="container">
-        <form id="registrationForm">
-            <h1>Faça seu<br>cadastro</h1>
+        <form id="registrationForm" aria-labelledby="form-title">
+            <h1 id="form-title">Faça seu<br>cadastro</h1>
 
             <div class="input-container">
-                <input type="text" id="nome" placeholder="Nome completo" required> 
-                <img width="20" height="20" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1"/>
+                <label for="nome" class="visually-hidden">Nome completo</label>
+                <input type="text" id="nome" placeholder="Nome completo" required aria-required="true" aria-describedby="nomeError"> 
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/user--v1.png" alt="Ícone de usuário"/>
                 <span class="error" id="nomeError"></span>
             </div> 
 
             <div class="input-container">
-                <input type="email" id="email" placeholder="Email" required> 
-                <img width="20" height="20" src="img/o-email.png" alt="email"/>
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" id="email" placeholder="Email" required aria-required="true" aria-describedby="emailError"> 
+                <img width="20" height="20" src="img/o-email.png" alt="Ícone de email"/>
                 <span class="error" id="emailError"></span>
             </div> 
 
             <div class="input-container">
-                <input type="password" id="senha" placeholder="Senha" required>
-                <img width="20" height="20" src="https://img.icons8.com/ios/50/lock-2.png" alt="lock-2"/>
+                <label for="senha" class="visually-hidden">Senha</label>
+                <input type="password" id="senha" placeholder="Senha" required aria-required="true" aria-describedby="senhaError">
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/lock-2.png" alt="Ícone de cadeado"/>
                 <span class="error" id="senhaError"></span>
             </div>
 
             <div class="input-container">
-                <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
-                <img width="20" height="20" src="https://img.icons8.com/ios/50/lock-2.png" alt="lock-2"/>
+                <label for="confirmarSenha" class="visually-hidden">Confirme sua senha</label>
+                <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required aria-required="true" aria-describedby="confirmarSenhaError">
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/lock-2.png" alt="Ícone de cadeado"/>
                 <span class="error" id="confirmarSenhaError"></span>
             </div>
 
-            <button type="submit" class="submit-button">Cadastrar</button>
+            <button type="submit" class="submit-button" aria-label="Cadastrar">Cadastrar</button>
 
             <div class="register-link">
-                <p>Já tem conta? <a href="index.html">Login</a></p>
+                <p>Já tem conta? <a href="index.html" aria-label="Login">Login</a></p>
             </div>
 
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <div class="g-signin2" data-onsuccess="onSignIn" aria-label="Login com Google"></div>
         </form>
     </div>
     

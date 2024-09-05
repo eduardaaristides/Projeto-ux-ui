@@ -12,67 +12,64 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="tela_principal.html"><img src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo"></a>
+            <a href="tela_principal.html" aria-label="Voltar para a tela principal">
+                <img src="img/Logo Sa+¦de Pr+¦.png" alt="Logo Saúde Pro" class="logo">
+            </a>
             <div class="title-container">
                 <h1 class="principal">Marta Gomes</h1>
             </div>
             <nav>
-                <a href="#">Sobre nós</a>
+                <a href="#" aria-label="Sobre nós">Sobre nós</a>
             </nav>
         </div>
     </header>
 
-    <div class="container rounded bg-white mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-5" width="150px" src="img/perfil.png">
-                    <span class="font-weight-bold">Marta Gomes</span>
-                    <span class="text-black-50">marta.gomes@example.com</span>
+    <main>
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                        <img class="rounded-circle mt-5" width="150px" src="img/perfil.png" alt="Foto de perfil de Marta Gomes">
+                        <span class="font-weight-bold">Marta Gomes</span>
+                        <span class="text-black-50">marta.gomes@example.com</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-5 border-right">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Configurações do Perfil</h4>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Configurações do Perfil</h4>
+                        </div>
+                        <form>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <label for="name" class="labels">Nome</label>
+                                    <input type="text" id="name" class="form-control" value="Marta Gomes" aria-label="Nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="labels">Email</label>
+                                    <input type="email" id="email" class="form-control" value="marta.gomes@example.com" aria-label="Email">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <label for="phone" class="labels">Telefone</label>
+                                    <input type="tel" id="phone" class="form-control" value="(11) 99999-9999" aria-label="Telefone">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="dob" class="labels">Data de Nascimento</label>
+                                    <input type="date" id="dob" class="form-control" value="1980-01-01" aria-label="Data de Nascimento">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="medical-history" class="labels">Histórico Médico</label>
+                                    <textarea id="medical-history" class="form-control" aria-label="Histórico Médico">Nenhum</textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary profile-button" type="submit" aria-label="Salvar Perfil">Salvar Perfil</button>
+                        </form>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-md-6">
-                            <label class="labels">Nome</label>
-                            <input type="text" class="form-control" value="Marta Gomes">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="labels">Email</label>
-                            <input type="email" class="form-control" value="marta.gomes@example.com">
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12">
-                            <label class="labels">Telefone</label>
-                            <input type="tel" class="form-control" value="(11) 99999-9999">
-                        </div>
-                        <div class="col-md-12">
-                            <label class="labels">Data de Nascimento</label>
-                            <input type="date" class="form-control" value="1980-01-01">
-                        </div>
-                        <div class="col-md-12">
-                            <label class="labels">Histórico Médico</label>
-                            <textarea class="form-control">Nenhum</textarea>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-primary profile-button" type="button">Salvar Perfil</button>
-                    
-                </div>
-            </div>
-          
-                    
-                
-            
-        </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

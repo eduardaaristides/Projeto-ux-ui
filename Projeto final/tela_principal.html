@@ -5,77 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaúdePro</title>
     <link rel="stylesheet" href="tela_principal.css">
-    <link rel="stylesheet" href="tela_principal.js">
+    <script src="tela_principal.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="perfil.html"><img width="50" height="50" src="img/perfil.png" alt="Perfil" class="logo"/></a>
+            <a href="perfil.html" aria-label="Perfil de Marta Gomes"><img width="50" height="50" src="img/perfil.png" alt="Perfil de Marta Gomes" class="logo"/></a>
             <h2>Marta Gomes</h2>
             <div class="title-container">
-                <h1 class="principal"></h1>
+                <h1 class="principal">SaúdePro</h1>
             </div>
             <nav>
-                <a href="#">Contatos</a>
-                <a href="#">Suporte</a>
+                <a href="#" aria-label="Contatos">Contatos</a>
+                <a href="#" aria-label="Suporte">Suporte</a>
             </nav>
         </div>
     </header>
 
     <!-- Seção de Contêiner -->
-    <div class="container">
-        <div class="caixa">
-            <h1 class="texto">Assistência</h1>
-            <a href="ajuda.html">
-                <img src="img/suporte-tecnico.png" alt="Profissionais" height="90px" width="90px">
+    <main class="container" role="main">
+        <div class="caixa" role="region" aria-labelledby="assistencia-title">
+            <h1 id="assistencia-title" class="texto">Assistência</h1>
+            <a href="ajuda.html" aria-label="Assistência">
+                <img src="img/suporte-tecnico.png" alt="Ícone de suporte técnico" height="90px" width="90px">
             </a>
         </div>
-        <div class="caixa">
-            <h1 class="texto">Agenda</h1>
-            <a href="consulta.html">
-                <img src="img/remedio.png" alt="Saúde" height="80px" width="80px">
+        <div class="caixa" role="region" aria-labelledby="agenda-title">
+            <h1 id="agenda-title" class="texto">Agenda</h1>
+            <a href="consulta.html" aria-label="Agenda">
+                <img src="img/remedio.png" alt="Ícone de remédio" height="80px" width="80px">
             </a>
         </div>
-        <div class="caixa">
-            <h1 class="texto">Análise de glicose e batimentos</h1>
-            <a href="Informacoes.html">
-                <img src="img/batimentos-cardiacos.png" alt="Segurança" height="80px" width="80px">
+        <div class="caixa" role="region" aria-labelledby="analise-title">
+            <h1 id="analise-title" class="texto">Análise de glicose e batimentos</h1>
+            <a href="Informacoes.html" aria-label="Análise de glicose e batimentos">
+                <img src="img/batimentos-cardiacos.png" alt="Ícone de batimentos cardíacos" height="80px" width="80px">
             </a>
         </div>
-        <div class="caixa">
-            <h1 class="texto">Lista de tarefas</h1>
-            <a href="todo.html">
-                <img src="img/tarefa-concluida.png" alt="Lista de tarefas" height="80px" width="80px">
+        <div class="caixa" role="region" aria-labelledby="tarefas-title">
+            <h1 id="tarefas-title" class="texto">Lista de tarefas</h1>
+            <a href="todo.html" aria-label="Lista de tarefas">
+                <img src="img/tarefa-concluida.png" alt="Ícone de tarefa concluída" height="80px" width="80px">
             </a>
         </div>
-        <!-- Novas caixas -->
-        <div class="caixa">
-            <h1 class="texto">Notificações</h1>
-            <a href="notificacao.html">
-                <img src="img/packard-bell (1).png" alt="Notificações" height="80px" width="80px">
+        <div class="caixa" role="region" aria-labelledby="notificacoes-title">
+            <h1 id="notificacoes-title" class="texto">Notificações</h1>
+            <a href="notificacao.html" aria-label="Notificações">
+                <img src="img/packard-bell (1).png" alt="Ícone de notificações" height="80px" width="80px">
             </a>
         </div>
-        <div class="caixa">
-            <h1 class="texto">Editar perfil</h1>
-            <a href="perfil.html">
-                <img src="img/perfil.png" alt="Editar perfil" height="80px" width="80px">
+        <div class="caixa" role="region" aria-labelledby="editar-perfil-title">
+            <h1 id="editar-perfil-title" class="texto">Editar perfil</h1>
+            <a href="perfil.html" aria-label="Editar perfil">
+                <img src="img/perfil.png" alt="Ícone de perfil" height="80px" width="80px">
             </a>
         </div>
-    </div>
-    
+    </main>
 
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="https://youtu.be/WycSe7Xfwf0?si=Pow_lKgSFUVCV13I">Como baixar aplicativos</a> |
-                <a href="#health-monitoring">Horário de medicamento</a> |
-                <a href="#accessibility">Como usar a lista de tarefas</a>
+                <a href="https://youtu.be/WycSe7Xfwf0?si=Pow_lKgSFUVCV13I" aria-label="Como baixar aplicativos">Como baixar aplicativos</a> |
+                <a href="#health-monitoring" aria-label="Horário de medicamento">Horário de medicamento</a> |
+                <a href="#accessibility" aria-label="Como usar a lista de tarefas">Como usar a lista de tarefas</a>
             </div>
         </div>
     </footer>
-
-    <script src="tela_principal.js"></script>
-
 </body>
 </html>
